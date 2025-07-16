@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import { useAppContext } from "@/contexts/AppContext";
+import Link from "next/link";
 
 const ResumeContainer = () => {
   const { handleResume } = useAppContext();
@@ -20,6 +21,7 @@ const ResumeContainer = () => {
           </div>
         ))}
       </div>
+      <Link className="px-4 py-2 rounded border-[2px] border-white transition hover:bg-white hover:text-black" href={'/.'}>Volver al inicio</Link>
     </main>
   );
 };
